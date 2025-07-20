@@ -83,12 +83,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- 修改oo2core_9_win64.dll的输出配置 -->
     <Content Include="plugins\oo2core_9_win64.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Link>oo2core_9_win64.dll</Link>
     </Content>
-    <!-- 添加UnityPlayer.dll的输出配置 -->
     <Content Include="plugins\UnityPlayer.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Link>UnityPlayer.dll</Link>
