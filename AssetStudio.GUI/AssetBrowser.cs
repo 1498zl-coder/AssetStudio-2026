@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,11 +33,11 @@ namespace AssetStudio.GUI
         {
             loadAssetMap.Enabled = false;
 
-            var openFileDialog = new OpenFileDialog() { Multiselect = false, Filter = "MessagePack AssetMap File|*.map" };
+            var openFileDialog = new OpenFileDialog() { Multiselect = false, Filter = "MessagePack资源映射文件|*.map" };
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 var path = openFileDialog.FileName;
-                Logger.Info($"Loading AssetMap...");
+                Logger.Info($"正在加载AssetMap...");
                 await Task.Run(() => ResourceMap.FromFile(path));
 
                 _sortedColumn = null;
@@ -66,7 +66,7 @@ namespace AssetStudio.GUI
         private void clear_Click(object sender, EventArgs e)
         {
             Clear();
-            Logger.Info($"Cleared !!");
+            Logger.Info($"已清除!!");
         }
         private void loadSelected_Click(object sender, EventArgs e)
         {
@@ -74,12 +74,12 @@ namespace AssetStudio.GUI
             var missingFiles = files.Where(x => !File.Exists(x));
             foreach (var file in missingFiles)
             {
-                Logger.Warning($"Unable to find file {file}, skipping...");
+                Logger.Warning($"无法找到文件{file},跳过处理...");
                 files.Remove(file);
             }
             if (files.Count != 0 && !files.Any(string.IsNullOrEmpty))
             {
-                Logger.Info("Loading...");
+                Logger.Info("正在加载...");
                 _parent.Invoke(() => _parent.LoadPaths(files.ToArray()));
             }
         }
@@ -256,7 +256,7 @@ namespace AssetStudio.GUI
             }
             catch (Exception)
             {
-                Logger.Error($"Invalid regex {value}");
+                Logger.Error($"无效的正则表达式{value}");
                 return;
             }
 
