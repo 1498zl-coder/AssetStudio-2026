@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace AssetStudio.GUI
@@ -23,7 +23,7 @@ namespace AssetStudio.GUI
 
             switch (loggerEvent)
             {
-                case LoggerEvent.错误:
+                case LoggerEvent.Error:
                     if (ShowErrorMessage)
                     {
                         MessageBox.Show(message);
