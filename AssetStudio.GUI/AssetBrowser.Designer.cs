@@ -1,4 +1,4 @@
-﻿using System.Configuration;
+using System.Configuration;
 using System.Windows.Forms;
 
 namespace AssetStudio.GUI
@@ -76,7 +76,7 @@ namespace AssetStudio.GUI
             loadAssetMap.Name = "loadAssetMap";
             loadAssetMap.Size = new System.Drawing.Size(114, 28);
             loadAssetMap.TabIndex = 0;
-            loadAssetMap.Text = "加载资产映射";
+            loadAssetMap.Text = "加载资源映射";
             loadAssetMap.UseVisualStyleBackColor = true;
             loadAssetMap.Click += loadAssetMap_Click;
             // 
@@ -109,7 +109,7 @@ namespace AssetStudio.GUI
             exportSelected.Name = "exportSelected";
             exportSelected.Size = new System.Drawing.Size(212, 28);
             exportSelected.TabIndex = 3;
-            exportSelected.Text = "导出所选资产";
+            exportSelected.Text = "导出所选资源";
             exportSelected.UseVisualStyleBackColor = true;
             exportSelected.Click += exportSelected_Click;
             // 
@@ -123,7 +123,6 @@ namespace AssetStudio.GUI
             assetDataGridView.Location = new System.Drawing.Point(3, 83);
             assetDataGridView.Name = "assetDataGridView";
             assetDataGridView.ReadOnly = true;
-            assetDataGridView.RowTemplate.Height = 25;
             assetDataGridView.Size = new System.Drawing.Size(518, 298);
             assetDataGridView.TabIndex = 2;
             assetDataGridView.VirtualMode = true;
